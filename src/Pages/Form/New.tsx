@@ -1,10 +1,10 @@
 // NewForm.js
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { FormProvider } from "../../Contexts/FormContext.tsx";
+import { FormProvider } from "../../Contexts/FormContext";
 import AddressPage from "./Address";
 import BasicInfoPage from "./BasicInfo";
-import SubmitPage from "./Submit.tsx";
+import SubmitPage from "./Submit";
 
 function NewForm() {
   return (

@@ -1,7 +1,7 @@
 // BasicInfoPage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useFormContext } from "../../Contexts/FormContext.tsx";
+import { useFormContext } from "../../Contexts/FormContext";
 
 function BasicInfoPage() {
   const navigate = useNavigate();

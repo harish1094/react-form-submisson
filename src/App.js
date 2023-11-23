@@ -1,8 +1,8 @@
 // App.js
 import React from "react";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import NewForm from "./Pages/Form/New.tsx";
-import Home from "./Pages/Home.tsx";
+import NewForm from "./Pages/Form/New";
+import Home from "./Pages/Home";
 
 const App = () => {
   return (

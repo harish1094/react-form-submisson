@@ -2,7 +2,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useFormContext } from "../../Contexts/FormContext.tsx";
+import { useFormContext } from "../../Contexts/FormContext";
 
 function SubmitPage() {
   const navigate = useNavigate();

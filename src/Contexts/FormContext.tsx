@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import { UserContextProps, UserDetails } from "../types/userDetails.ts";
+import { UserContextProps, UserDetails } from "../types/userDetails";
 
 const defaultState = {
   userData: {
