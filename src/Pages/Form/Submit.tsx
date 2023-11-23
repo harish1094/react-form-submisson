@@ -2,11 +2,11 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useMyContext } from "./MyContext";
+import { useFormContext } from "../../Contexts/FormContext.tsx";
 
 function SubmitPage() {
   const navigate = useNavigate();
-  const { userData } = useMyContext();
+  const { userData } = useFormContext();
 
   const handleSubmit = () => {
     // Handle submission of userData

@@ -2,18 +2,18 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useMyContext } from "./MyContext";
+import { useFormContext } from "../../Contexts/FormContext.tsx";
 
-function AddressPage() {
+const AddressPage = () => {
   const navigate = useNavigate();
-  const { userData, setUserData } = useMyContext();
+  const { userData, setUserData } = useFormContext();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUserData((prevUserData) => ({
       ...prevUserData,
       address: {
-        ...prevUserData.address,
+        ...userData?.address,
         [name]: value,
       },
     }));
@@ -77,6 +77,6 @@ function AddressPage() {
       </Row>
     </div>
   );
-}
+};
 
 export default AddressPage;
