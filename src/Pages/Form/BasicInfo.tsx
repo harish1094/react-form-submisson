@@ -8,7 +8,7 @@ function BasicInfoPage() {
 
   const { userData, setUserData } = useFormContext();
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setUserData((prevUserData) => ({
       ...prevUserData,
