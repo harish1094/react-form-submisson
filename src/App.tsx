@@ -1,21 +1,56 @@
 // App.js
 import React from "react";
-import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import NewForm from "./Pages/Form/New";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { UserProvider } from "./Contexts/UserContext";
+import Layout from "./Layout/Layout";
+import About from "./Pages/About";
 import Home from "./Pages/Home";
+import AddressPage from "./Pages/Users/Address";
+import BasicInfoPage from "./Pages/Users/BasicInfo";
+import SubmitPage from "./Pages/Users/Submit";
+import Users from "./Pages/Users/User";
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <h1>Use Context With multipage form submission</h1>
-        <Link to="">Home</Link>
-        <Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about/*" element={<NewForm />} />
-          <Route path="/form/*" element={<NewForm />} />
-        </Routes>
-      </div>
+          <Route path="/about/*" element={<About />} />
+          <Route
+            path="/users/"
+            element={
+              <UserProvider>
+                <Users />
+              </UserProvider>
+            }
+          />
+          <Route
+            path="/users/new"
+            element={
+              <UserProvider>
+                <BasicInfoPage />
+              </UserProvider>
+            }
+          />
+          <Route
+            path="/users/address"
+            element={
+              <UserProvider>
+                <AddressPage />
+              </UserProvider>
+            }
+          />
+          <Route
+            path="/users/submit"
+            element={
+              <UserProvider>
+                <SubmitPage />
+              </UserProvider>
+            }
+          />
+        </Route>
+      </Routes>
     </Router>
   );
 };

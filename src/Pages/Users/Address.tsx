@@ -2,7 +2,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useFormContext } from "../../Contexts/FormContext";
+import { useFormContext } from "../../Contexts/UserContext";
 
 const AddressPage: React.FC = () => {
   const navigate = useNavigate();
@@ -68,7 +68,7 @@ const AddressPage: React.FC = () => {
         <Col md="auto">
           <button
             onClick={() => {
-              navigate("/form/submit");
+              navigate("/users/submit");
             }}
           >
             {"Next"}

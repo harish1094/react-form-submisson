@@ -1,7 +1,7 @@
 // BasicInfoPage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useFormContext } from "../../Contexts/FormContext";
+import { useFormContext } from "../../Contexts/UserContext";
 
 function BasicInfoPage() {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ function BasicInfoPage() {
       <br />
       <button
         onClick={() => {
-          navigate("address");
+          navigate("/users/address");
         }}
       >
         {"Next"}
