@@ -1,5 +1,5 @@
-# Multipage Form submission UI/UX (ReactJS)
-Form Submission using `useContext` and `Provider`
+# useContext with state management UI/UX (ReactJS)(TypeScript)
+Example of `useContext` and `Provider`
 
 
 1. Install [NodeJs](https://nodejs.org/en/):
