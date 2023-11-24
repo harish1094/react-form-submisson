@@ -4,16 +4,17 @@ import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useFormContext } from "../../Contexts/FormContext";
 
+
 const AddressPage = () => {
   const navigate = useNavigate();
   const { userData, setUserData } = useFormContext();
-
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUserData((prevUserData) => ({
       ...prevUserData,
-      address: {
-        ...userData?.address,
+      basic: {
+        ...prevUserData.basic,
         [name]: value,
       },
     }));
