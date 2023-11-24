@@ -1,14 +1,14 @@
-// BasicInfoPage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormContext } from "../../Contexts/FormContext";
 
-function BasicInfoPage() {
+const BasicInfoPage: React.FC = () => {
   const navigate = useNavigate();
-
   const { userData, setUserData } = useFormContext();
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const { name, value } = e.target;
     setUserData((prevUserData) => ({
       ...prevUserData,
@@ -51,6 +51,6 @@ function BasicInfoPage() {
       </button>
     </div>
   );
-}
+};
 
 export default BasicInfoPage;

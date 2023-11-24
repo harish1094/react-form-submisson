@@ -1,28 +1,26 @@
-import React, { useContext, useState } from "react";
+// FormContext.tsx
+import React, { createContext, useContext, useState } from "react";
+import { UserDetails } from "../types/userDetails";
 
-import { UserContextProps, UserDetails } from "../types/userDetails";
+interface UserContextProps {
+  userData: UserDetails;
+  setUserData: React.Dispatch<React.SetStateAction<UserDetails>>;
+}
 
-const defaultState = {
-  userData: {
-    basic: { name: "", email: "" },
-    address: { street: "", city: "", state: "" },
-  } as UserDetails,
-  setUserData: (data: UserDetails) => {},
-} as UserContextProps;
+const UserContext = createContext<UserContextProps | undefined>(undefined);
 
-const UserContext = React.createContext<UserContextProps>(defaultState);
-
-interface MyProviderProps {
+interface FormProviderProps {
   children: React.ReactNode;
 }
-const FormProvider: React.FC<MyProviderProps> = ({ children }) => {
-  const [userData, setUserData] = useState<UserDetails>(
-    defaultState.userData as UserDetails
-  );
-  const contextValue = {
-    userData,
-    setUserData,
-  };
+
+const FormProvider: React.FC<FormProviderProps> = ({ children }) => {
+  const [userData, setUserData] = useState<UserDetails>({
+    basic: { name: "", email: "" },
+    address: { street: "", city: "", state: "" },
+  });
+
+  const contextValue = { userData, setUserData };
+
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
