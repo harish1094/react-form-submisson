@@ -15,7 +15,7 @@ const UserContext = React.createContext<UserContextProps>(defaultState);
 interface MyProviderProps {
   children: React.ReactNode;
 }
-const FormProvider: React.FC<MyProviderProps> = ({ children }) => {
+const UserProvider: React.FC<MyProviderProps> = ({ children }) => {
   const [userData, setUserData] = useState<UserDetails>(
     defaultState.userData as UserDetails
   );
@@ -31,9 +31,9 @@ const FormProvider: React.FC<MyProviderProps> = ({ children }) => {
 const useFormContext = (): UserContextProps => {
   const context = useContext(UserContext);
   if (!context) {
-    throw new Error("useFormContext must be used within a FormProvider");
+    throw new Error("useFormContext must be used within a UserProvider");
   }
   return context;
 };
 
-export { FormProvider, useFormContext };
+export { UserProvider, useFormContext };
