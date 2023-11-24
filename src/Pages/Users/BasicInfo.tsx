@@ -1,12 +1,12 @@
 // BasicInfoPage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useFormContext } from "../../Contexts/UserContext";
+import { useUserContext } from "../../Contexts/UserContext";
 
 function BasicInfoPage() {
   const navigate = useNavigate();
 
-  const { userData, setUserData } = useFormContext();
+  const { userData, setUserData } = useUserContext();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
