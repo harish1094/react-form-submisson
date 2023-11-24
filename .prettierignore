@@ -1,0 +1,11 @@
+*node_modules/
+.*
+*.md
+*benchmark
+*bin
+*db
+*docs
+*examples
+*test
+*.yaml
+*.py
