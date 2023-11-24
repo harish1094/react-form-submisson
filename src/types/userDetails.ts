@@ -1,6 +1,6 @@
 export interface UserContextProps {
   userData: UserDetails;
-  setUserData: (userData: UserDetails) => void;
+  setUserData: React.Dispatch<React.SetStateAction<UserDetails>>;
 }
 
 export interface UserDetails {
