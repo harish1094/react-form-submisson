@@ -2,11 +2,11 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useFormContext } from "../../Contexts/UserContext";
+import { useUserContext } from "../../Contexts/UserContext";
 
 const AddressPage: React.FC = () => {
   const navigate = useNavigate();
-  const { userData, setUserData } = useFormContext();
+  const { userData, setUserData } = useUserContext();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

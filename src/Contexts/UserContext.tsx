@@ -28,12 +28,12 @@ const UserProvider: React.FC<MyProviderProps> = ({ children }) => {
   );
 };
 
-const useFormContext = (): UserContextProps => {
+const useUserContext = (): UserContextProps => {
   const context = useContext(UserContext);
   if (!context) {
-    throw new Error("useFormContext must be used within a UserProvider");
+    throw new Error("useUserContext must be used within a UserProvider");
   }
   return context;
 };
 
-export { UserProvider, useFormContext };
+export { UserProvider, useUserContext };
