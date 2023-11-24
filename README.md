@@ -1,5 +1,5 @@
 # Multipage Form submission UI/UX (ReactJS)
-Form Submission with ReactJs using useContext and Provider
+Form Submission using `useContext` and `Provider`
 
 
 1. Install [NodeJs](https://nodejs.org/en/):
@@ -41,4 +41,7 @@ Above command bundles React in production mode and optimizes the build for the b
 
 More information about deployement is available [here](https://facebook.github.io/create-react-app/docs/deployment)
 
+#### Reference
+- [React useContext](https://react.dev/reference/react/useContext)
+- [how-to-use-react-context-typescript](https://blog.logrocket.com/how-to-use-react-context-typescript/)
 
